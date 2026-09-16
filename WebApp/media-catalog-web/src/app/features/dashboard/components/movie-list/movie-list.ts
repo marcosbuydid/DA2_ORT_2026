@@ -4,10 +4,12 @@ import { filter, map, Observable, of, switchMap, take } from 'rxjs';
 import { MovieService } from '../../../movies/movie.service';
 import { SessionService } from '../../../../core/services/session.service';
 import { CommonModule, DatePipe } from '@angular/common';
+import { EditMovie } from '../edit-movie/edit-movie';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
-  imports: [DatePipe, CommonModule,],
+  imports: [DatePipe, CommonModule, EditMovie, RouterLink],
   templateUrl: './movie-list.html',
   styleUrl: './movie-list.css',
 })
