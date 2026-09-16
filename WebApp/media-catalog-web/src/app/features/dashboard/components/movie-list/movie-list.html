@@ -9,43 +9,45 @@
         </div>
     }
     @else {
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Director</th>
-                    <th>ReleaseDate</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (movie of movies; track movie.id) {
-                <tr>
-                    <td>{{ movie.id }}</td>
-                    <td>{{ movie.title }}</td>
-                    <td>{{ movie.director }}</td>
-                    <td>{{ movie.releaseDate | date:'dd/MM/yyyy' }}</td>
-                    <ng-container *ngIf="isAdmin$ | async">
-                        <td class="text-end pe-5">
-                            <button class="btn btn-success btn-sm" [routerLink]="['/dashboard/edit-movie', movie.title]">
-                                Update
-                            </button>
-                        </td>
-                    </ng-container>
-                    <ng-container *ngIf="isAdmin$ | async">
-                        <td class="text-end pe-5">
-                            <button class="btn btn-danger btn-sm" (click)="deleteMovie(movie.title)">
-                                Delete
-                            </button>
-                        </td>
-                    </ng-container>
-                </tr>
-                } @empty {
-                <tr>
-                    <td colspan="2" class="text-center">No movies found.</td>
-                </tr>
-                }
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>ReleaseDate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (movie of movies; track movie.id) {
+                    <tr>
+                        <td>{{ movie.id }}</td>
+                        <td>{{ movie.title }}</td>
+                        <td>{{ movie.director }}</td>
+                        <td>{{ movie.releaseDate | date:'dd/MM/yyyy' }}</td>
+                        <ng-container *ngIf="isAdmin$ | async">
+                            <td class="text-end pe-5">
+                                <button class="btn btn-success btn-sm" [routerLink]="['/dashboard/edit-movie', movie.title]">
+                                    Update
+                                </button>
+                            </td>
+                        </ng-container>
+                        <ng-container *ngIf="isAdmin$ | async">
+                            <td class="text-end pe-5">
+                                <button class="btn btn-danger btn-sm" (click)="deleteMovie(movie.title)">
+                                    Delete
+                                </button>
+                            </td>
+                        </ng-container>
+                    </tr>
+                    } @empty {
+                    <tr>
+                        <td colspan="2" class="text-center">No movies found.</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     }
 </div>
