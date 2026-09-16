@@ -35,6 +35,13 @@
                     <td>{{ user.roleId }}</td>
                     <ng-container *ngIf="isAdmin$ | async">
                         <td class="text-end pe-5">
+                            <button class="btn btn-success btn-sm" [routerLink]="['/dashboard/edit-user', user.email]">
+                                Update
+                            </button>
+                        </td>
+                    </ng-container>
+                    <ng-container *ngIf="isAdmin$ | async">
+                        <td class="text-end pe-5">
                             <button class="btn btn-danger btn-sm" (click)="deleteUser(user.email)">
                                 Delete
                             </button>

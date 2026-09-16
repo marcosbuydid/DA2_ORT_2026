@@ -4,10 +4,12 @@ import { UserDetailDTO } from '../../../auth/models/user-detail.dto';
 import { filter, map, Observable, of, switchMap, take } from 'rxjs';
 import { SessionService } from '../../../../core/services/session.service';
 import { UserService } from '../../../users/user.service';
+import { EditUser } from '../edit-user/edit-user';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
-  imports: [CommonModule],
+  imports: [CommonModule, EditUser, RouterLink],
   templateUrl: './user-list.html',
   styleUrl: './user-list.css',
 })

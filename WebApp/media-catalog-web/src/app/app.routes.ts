@@ -11,6 +11,7 @@ import { AddMovie } from './features/dashboard/components/add-movie/add-movie';
 import { ChangePassword } from './features/dashboard/components/change-password/change-password';
 import { Home } from './features/dashboard/components/home/home';
 import { authGuard } from './core/guards/auth-guard';
+import { EditUser } from './features/dashboard/components/edit-user/edit-user';
 
 
 export const routes: Routes = [
@@ -25,6 +26,7 @@ export const routes: Routes = [
             { path: 'add-role', component: AddRole },
             { path: 'users', component: UserList },
             { path: 'add-user', component: AddUser },
+            { path: 'edit-user/:email', component: EditUser },
             { path: 'movies', component: MovieList },
             { path: 'add-movie', component: AddMovie },
             { path: 'change-password', component: ChangePassword },
