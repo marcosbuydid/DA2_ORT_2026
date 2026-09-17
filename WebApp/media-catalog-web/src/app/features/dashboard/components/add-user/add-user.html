@@ -14,7 +14,7 @@
             <div class="mb-3">
               <input type="text"
                      class="form-control rounded-3 border-secondary"
-                     placeholder="Type your name"
+                     placeholder="Type the name"
                      formControlName="name"
                      [ngClass]="{ 'is-invalid': submitted && f['name'].errors }" />
               <div *ngIf="submitted && f['name'].errors" class="invalid-feedback text-start">
@@ -25,7 +25,7 @@
             <div class="mb-3">
               <input type="text"
                      class="form-control rounded-3 border-secondary"
-                     placeholder="Type your last name"
+                     placeholder="Type the last name"
                      formControlName="lastName"
                      [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
               <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback text-start">
@@ -36,7 +36,7 @@
             <div class="mb-3">
               <input type="email"
                      class="form-control rounded-3 border-secondary"
-                     placeholder="Type your email"
+                     placeholder="Type the email"
                      formControlName="email"
                      [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
               <div *ngIf="submitted && f['email'].errors" class="invalid-feedback text-start">
@@ -48,7 +48,7 @@
             <div class="mb-3">
               <input type="password"
                      class="form-control rounded-3 border-secondary"
-                     placeholder="Type your password"
+                     placeholder="Type the password"
                      formControlName="password"
                      [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
               <div *ngIf="submitted && f['password'].errors" class="invalid-feedback text-start">

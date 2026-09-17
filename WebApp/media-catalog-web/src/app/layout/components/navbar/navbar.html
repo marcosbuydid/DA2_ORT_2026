@@ -1,7 +1,22 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 position-relative">
 
-  <a class="navbar-brand fw-bold" [routerLink]="['/dashboard', 'home']">MEDIA-CATALOG</a>
+  <a class="navbar-brand fw-bold d-flex align-items-center gap-2" [routerLink]="['/dashboard/home']">
+    <svg width="30" height="30" viewBox="0 0 76 76" role="img">
+      <title>Media Catalog</title>
+      <rect x="0" y="0" width="76" height="76" rx="14" fill="currentColor"/>
+      <line x1="25" y1="0" x2="25" y2="76" stroke="white" stroke-width="1" opacity="0.2"/>
+      <line x1="51" y1="0" x2="51" y2="76" stroke="white" stroke-width="1" opacity="0.2"/>
+      <line x1="0" y1="25" x2="76" y2="25" stroke="white" stroke-width="1" opacity="0.2"/>
+      <line x1="0" y1="51" x2="76" y2="51" stroke="white" stroke-width="1" opacity="0.2"/>
+      <polygon points="28,20 28,56 60,38" fill="white"/>
+      <circle cx="57" cy="57" r="3" fill="white" opacity="0.5"/>
+      <circle cx="66" cy="57" r="3" fill="white" opacity="0.5"/>
+      <circle cx="57" cy="66" r="3" fill="white" opacity="0.5"/>
+      <circle cx="66" cy="66" r="3" fill="white" opacity="0.5"/>
+    </svg>
+    MEDIA-CATALOG
+  </a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +73,7 @@
             <a class="dropdown-item" [routerLink]="['/dashboard', 'movies']">Movie List</a>
           </li>
           <li>
-            <a class="dropdown-item">Add Movie</a>
+            <a class="dropdown-item" [routerLink]="['/dashboard', 'add-movie']">Add Movie</a>
           </li>
         </ul>
       </li>

@@ -1,43 +1,13 @@
 <app-navbar></app-navbar>
 
-<div class="container-fluid position-relative overflow-hidden min-vh-100 bg-light">
+<div class="container-fluid position-relative overflow-hidden flex-grow-1 bg-light">
     <div class="watermark">
         @for (item of items; track $index) {
         <span>MEDIA CATALOG</span>
         }
     </div>
-
-    @if (section === 'home') {
-        <div class="container mt-3">
-            <h4>Dashboard</h4>
-            <p>Media Catalog Dashboard</p>
-        </div>
-    }
-
-    @if (section === 'roles') {
-        <app-role-list></app-role-list>
-    }
-
-    @if (section === 'add-role') {
-        <app-add-role></app-add-role>
-    }
-
-    @if (section === 'users') {
-        <app-user-list></app-user-list>
-    }
-
-     @if (section === 'add-user') {
-        <app-add-user></app-add-user>
-    }
-
-    @if (section === 'movies') {
-      <app-movie-list></app-movie-list>
-    }
-
-    @if (section === 'change-password') {
-       <app-change-password></app-change-password>
-    }
-
+    
+    <router-outlet></router-outlet>
 </div>
 
 <app-footer></app-footer>
